@@ -773,7 +773,7 @@ def get_dialogo_opciones(item, default_action, strm):
                 dialog_ok("No puedes ver ese vídeo porque...", motivo, item.url)
         else:
             dialog_ok("No puedes ver ese vídeo porque...", "El servidor donde está alojado no está",
-                      "soportado en pelisalacarta todavía", item.url)
+                      "soportado en MiTvSpain todavía", item.url)
 
         if item.channel == "favoritos":
             # "Quitar de favoritos"
@@ -1018,10 +1018,10 @@ def play_torrent(item, xlistitem, mediaurl):
 
         # Iniciamos el cliente:
         c = Client(url=mediaurl, is_playing_fnc=xbmc.Player().isPlaying, wait_time=None, timeout=10,
-                   temp_path=os.path.join(client_tmp_path, "pelisalacarta-torrent"), print_status=debug)
+                   temp_path=os.path.join(client_tmp_path, "MiTvSpain-torrent"), print_status=debug)
 
         # Mostramos el progreso
-        progreso = dialog_progress("Pelisalacarta - Torrent", "Iniciando...")
+        progreso = dialog_progress("MiTvSpain - Torrent", "Iniciando...")
 
         # Mientras el progreso no sea cancelado ni el cliente cerrado
         while not c.closed:
@@ -1052,21 +1052,21 @@ def play_torrent(item, xlistitem, mediaurl):
                 if progreso.iscanceled():
                     progreso.close()
                     if s.buffer == 100:
-                        if dialog_yesno("Pelisalacarta - Torrent", "¿Deseas iniciar la reproduccion?"):
+                        if dialog_yesno("MiTvSpain - Torrent", "¿Deseas iniciar la reproduccion?"):
                             played = False
-                            progreso = dialog_progress("Pelisalacarta - Torrent", "")
+                            progreso = dialog_progress("MiTvSpain - Torrent", "")
                             progreso.update(s.buffer, txt, txt2, txt3)
                         else:
-                            progreso = dialog_progress("Pelisalacarta - Torrent", "")
+                            progreso = dialog_progress("MiTvSpain - Torrent", "")
                             break
 
                     else:
-                        if dialog_yesno("Pelisalacarta - Torrent", "¿Deseas cancelar el proceso?"):
-                            progreso = dialog_progress("Pelisalacarta - Torrent", "")
+                        if dialog_yesno("MiTvSpain - Torrent", "¿Deseas cancelar el proceso?"):
+                            progreso = dialog_progress("MiTvSpain - Torrent", "")
                             break
 
                         else:
-                            progreso = dialog_progress("Pelisalacarta - Torrent", "")
+                            progreso = dialog_progress("MiTvSpain - Torrent", "")
                             progreso.update(s.buffer, txt, txt2, txt3)
 
                 # Si el buffer se ha llenado y la reproduccion no ha sido iniciada, se inicia
@@ -1097,7 +1097,7 @@ def play_torrent(item, xlistitem, mediaurl):
                         time.sleep(1)
 
                     # Cuando este cerrado,  Volvemos a mostrar el dialogo
-                    progreso = dialog_progress("Pelisalacarta - Torrent", "")
+                    progreso = dialog_progress("MiTvSpain - Torrent", "")
                     progreso.update(s.buffer, txt, txt2, txt3)
 
             except:

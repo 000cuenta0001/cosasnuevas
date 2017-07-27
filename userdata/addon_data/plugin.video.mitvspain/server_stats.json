@@ -1,7 +1,18 @@
 {
-    "created": 1501052959.5146649, 
+    "created": 1501053223.109, 
     "data": {
-        "gamovideo": {
+        "openload": {
+            "20170727": {
+                "find_videos": {
+                    "found": 5
+                }, 
+                "resolve": {
+                    "error": 0, 
+                    "sucess": 5
+                }
+            }
+        }, 
+        "powvideo": {
             "20170726": {
                 "find_videos": {
                     "found": 1
@@ -9,6 +20,37 @@
                 "resolve": {
                     "error": 0, 
                     "sucess": 1
+                }
+            }, 
+            "20170727": {
+                "find_videos": {
+                    "found": 2
+                }, 
+                "resolve": {
+                    "error": 0, 
+                    "sucess": 2
+                }
+            }
+        }, 
+        "streamcloud": {
+            "20170727": {
+                "find_videos": {
+                    "found": 2
+                }, 
+                "resolve": {
+                    "error": 0, 
+                    "sucess": 2
+                }
+            }
+        }, 
+        "torrent": {
+            "20170727": {
+                "find_videos": {
+                    "found": 1
+                }, 
+                "resolve": {
+                    "error": 0, 
+                    "sucess": 13
                 }
             }
         }
