@@ -5,7 +5,6 @@
         "result_mode": 0, 
         "saved_searches_limit": 0, 
         "saved_searches_list": [
-            "la doncella", 
             "bronce", 
             "dragon", 
             "fargo", 
@@ -14,7 +13,8 @@
             "zoo", 
             "señor", 
             "guar", 
-            "comancheria"
+            "comancheria", 
+            "formula"
         ]
     }
 }
